@@ -1,0 +1,76 @@
+/* гуглил media, ,брал из макета размер 770-смена навигационного меню*/
+
+@media screen and (max-width: 770px) {
+    .nav {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 0%;
+        background-color: rgb(55, 55, 55);
+        border-top: 2px inset rgb(128, 128, 128);
+    }
+
+    .nav_item {
+    display: block;
+    padding: 12px 15px;
+    }
+
+    .cont_1 {
+        height: 50px;
+    }
+
+    .menu-box {
+        display: block;
+        width: 40px;
+        height: 40px;
+        color: transparent;
+        background-image: url(../img/menuoff.png);
+        background-size: 40px 40px;
+        position: absolute;
+        top: 5px;
+        right: 20px;
+        z-index: 1;
+        transition-duration: 0.5s;
+    }
+
+    #menu-box_checkbox:checked + .menu-box { 
+        background-image: url(../img/menuon.png);      
+    }
+    
+    #menu-box_checkbox:checked~.nav { 
+        display: block;
+        top: 100%;
+    }
+
+
+    .cont_3 {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .cont_3_right {
+        margin: 20px 0 0 0;
+        max-width: 770px;
+
+    }
+
+    .rb1_s{
+        display: flex;
+        justify-content: flex-end ;
+    }
+
+    .rb1_search {
+        height: 35px;
+        flex-grow: 90;
+    }
+
+    .rb1_button {
+        min-width: 35px;
+        height: 35px;
+        margin-right: 15px;
+        border: 0.5px solid #d8d8d8;
+        border-radius: 0 5px 5px 0;
+        background: url(https://cdn1.iconfinder.com/data/icons/huge-business-icons/512/Search.png) center / 15px 15px no-repeat #f5f5f5;
+    }
+
+}
